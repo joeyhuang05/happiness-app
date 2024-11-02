@@ -2,7 +2,7 @@ def get_weighted_average(scores, gamma):
   weighted_sum = 0
   total_weight = 0
   for i in range(len(scores)):
-    weight = gamma ** (len(scores) - i - 1)
+    weight = gamma ** (2 * (len(scores) - i - 1))
     weighted_sum += scores[i] * weight
     total_weight += weight
   return weighted_sum / total_weight if total_weight != 0 else 0
