@@ -11,7 +11,7 @@ def reset_scores():
     return jsonify({'reset scores to '}), 200
 
 
-@app.route('/get_happinese', methods=['GET'])
+@app.route('/get_happiness', methods=['GET'])
 def get_happinese():
     score = get_weighted_average(scores, 0.9)
     return jsonify({'score' : score}), 200
@@ -23,6 +23,8 @@ def calculate_happiness():
     data = request.json  
     scores.append(data.score)
     return '', 200
+
+
 
 
 if __name__ == '__main__':

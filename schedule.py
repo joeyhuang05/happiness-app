@@ -22,7 +22,7 @@ def schedule_random_prompt():
         time.sleep(30)  # Sleep to avoid busy waiting
     
     # Send the prompt to the Flask app or trigger data collection
-    response = requests.post('http://localhost:5000/get_happinese', json={'prompt': 'How happy are you today on a scale from 1 to 10?'})
+    response = rgequests.post('http://localhost:5000/get_happiness', json={'prompt': 'How happy are you today on a scale from 1 to 10?'})
     print("Prompt sent:", response.json())
 
 if __name__ == "__main__":
