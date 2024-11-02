@@ -16,3 +16,5 @@ if __name__ == '__main__':
   weighted_avg = get_weighted_average(scores, 0.9)
   print("Weighted average:", weighted_avg)
   print("Unweighted average:", sum(scores) / len(scores))
+
+
